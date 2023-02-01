@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.print-menu{
+    width: 90%;
+    margin: 10px auto; 
+}
+
+.print-menu .header{
+    width: 100%;
+    height: 140px;
+    background-color: rgb(42, 47, 60);
+    display: flex;
+    align-items: center;
+    position: relative;    
+}
+
+.header img{
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: .5s;
+    user-select: none;
+    filter: grayscale(100%);
+}
+
+.header img:hover{
+filter: grayscale(0%);
+transform: scale(1.05);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);    
+}
+
+.header-text{
+    color: white;
+    width: 60%;
+    margin-left: auto;
+}
+
+.header-text h1{
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.header-text p{
+    font-size: 1rem;
+    color: lightgray;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-area{
+    width: 30%;
+    margin-left: 55px;
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.left-area .contacto{
+    margin-top: 90px;
+    padding: 0 30px;
+}
+
+.contacto h4{
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.contacto h5{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.contacto p{
+    font-size: 17px;
+}
+
+.skills{
+    margin-top: 20px;
+}
+
+.skills h1{
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.bars{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+    padding: 0 20px;
+}
+
+.bars .bar p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.bar span{
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(152, 143, 143);
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.bar span::before{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+
+
+.right-area{
+    width: 60%;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.right-area h1{
+    margin: 10px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.right-area h1 span{
+    margin-left: 30px;
+    font-size: 50px;
+    color: lightgray;
+}
+
+.right-area p{
+    padding-left: 20px;
+    text-align: justify;
+    word-break: break-all;
+    font-size: 17px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.work-group{
+    margin: 20px 0;
+}
+
+.work .work-group{
+    position: relative;
+    margin: 10px;
+    padding: 15px 0px;
+}
+
+.work-group h3{
+    font-size: 22px;
+    font-weight: normal;
+    padding-left: 70px;
+}
+.work-group h4{
+    font-size: 18px;
+    padding-left: 70px;
+    font-weight: normal;
+    color: gray;
+}
+
+.educacion{
+    margin-top: 30px;
+}
+
+.edu-group h1{
+    margin-left: 30px;
+    font-size: 50px;
+    color: lightgray;
+}
+
+.edu-group{
+    position: relative;
+    margin: 10px 0;
+}
+
+.edu-group h4{
+    padding-left: 80px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.edu-group span{
+    position: absolute;
+    top: 1px;
+    right: 0;
+    font-size: 15px;
+    color: gray;
+    /* font-weight: bold; */
+}
+
+button{
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 50px 0 50px 0px;
+    background-color: rgb(152, 143, 143);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:hover{
+    background-color: black;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+
+
+@media print {
+    body *{
+        visibility: hidden;
+    }
+    print-area *{
+        visibility: visible;
+    }
+}
